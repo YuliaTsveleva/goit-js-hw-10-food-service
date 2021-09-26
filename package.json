@@ -1,5 +1,5 @@
 {
-  "name": "parcel-project-template",
+  "name": "goit-js-hw-10-food-service",
   "version": "1.1.0",
   "description": "**Читать на других языках: [Русский](README.md), [Українська](README.ua.md).**",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/YuliaTsveleva/goit-js-hw-10-food-service.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YuliaTsveleva/goit-js-hw-10-food-service/issues"
