@@ -19,20 +19,18 @@ const body = document.querySelector('body');
 
 if (
   localStorage.getItem('theme-swith') === null ||
-  localStorage.getItem('theme-swith') === 'darkTheme'
+  localStorage.getItem('theme-swith') === 'lightTheme'
 ) {
-  toSetDarkTheme();
-  themeSwitcher.defaultChecked = true;
-}
-//   themeSwitcher.defaultChecked = true;
-// body.classList.add('dark-theme');
-
-if (localStorage.getItem('theme-swith') === 'lightTheme') {
   toSetLightTheme();
   themeSwitcher.defaultChecked = false;
 }
 
-themeSwitcher.addEventListener('click', e => {
+if (localStorage.getItem('theme-swith') === 'darkTheme') {
+  toSetDarkTheme();
+  themeSwitcher.defaultChecked = true;
+}
+
+themeSwitcher.addEventListener('change', e => {
   if (e.target.checked) {
     toSetDarkTheme();
   } else {
