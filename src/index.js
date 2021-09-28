@@ -17,17 +17,17 @@ const Theme = {
 const themeSwitcher = document.querySelector('.theme-switch__toggle');
 const body = document.querySelector('body');
 
+if (localStorage.getItem('theme-swith') === 'darkTheme') {
+  toSetDarkTheme();
+  themeSwitcher.defaultChecked = true;
+}
+
 if (
   localStorage.getItem('theme-swith') === null ||
   localStorage.getItem('theme-swith') === 'lightTheme'
 ) {
   toSetLightTheme();
   themeSwitcher.defaultChecked = false;
-}
-
-if (localStorage.getItem('theme-swith') === 'darkTheme') {
-  toSetDarkTheme();
-  themeSwitcher.defaultChecked = true;
 }
 
 themeSwitcher.addEventListener('change', e => {
