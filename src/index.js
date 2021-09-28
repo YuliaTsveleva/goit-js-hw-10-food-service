@@ -16,13 +16,10 @@ const Theme = {
   DARK: 'dark-theme',
 };
 
-if (
-  // localStorage.getItem('theme-swith') === null ||
-  localStorage.getItem('theme-swith') === 'lightTheme'
-) {
-  toSetLightTheme();
-  themeSwitcher.checked = false;
-}
+// if (localStorage.getItem('theme-swith') === 'lightTheme') {
+//   toSetLightTheme();
+//   themeSwitcher.checked = false;
+// }
 
 if (localStorage.getItem('theme-swith') === 'darkTheme') {
   toSetDarkTheme();
