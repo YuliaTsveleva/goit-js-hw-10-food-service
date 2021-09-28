@@ -9,25 +9,24 @@ function createMenuMarkup(menu) {
   return menuTemplate(menu);
 }
 
+const themeSwitcher = document.querySelector('.theme-switch__toggle');
+const body = document.querySelector('body');
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
 
-const themeSwitcher = document.querySelector('.theme-switch__toggle');
-const body = document.querySelector('body');
-
-if (localStorage.getItem('theme-swith') === 'darkTheme') {
-  toSetDarkTheme();
-  themeSwitcher.defaultChecked = true;
-}
-
 if (
-  localStorage.getItem('theme-swith') === null ||
+  // localStorage.getItem('theme-swith') === null ||
   localStorage.getItem('theme-swith') === 'lightTheme'
 ) {
   toSetLightTheme();
-  themeSwitcher.defaultChecked = false;
+  themeSwitcher.checked = false;
+}
+
+if (localStorage.getItem('theme-swith') === 'darkTheme') {
+  toSetDarkTheme();
+  themeSwitcher.checked = true;
 }
 
 themeSwitcher.addEventListener('change', e => {
